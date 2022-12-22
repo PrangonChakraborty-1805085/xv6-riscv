@@ -89,3 +89,15 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+uint64
+sys_trace(void)
+{
+  int number;
+  argint(0, &number);
+	return trace(number);
+}
+uint64
+sys_sysinfo(void)
+{
+   return sysinfo();
+}
